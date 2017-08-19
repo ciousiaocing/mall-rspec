@@ -8,6 +8,10 @@ class Cart
   def initialize
     # @items = items
     @items = []
+    # [CartItem.new(1, 3), CartItem.new(2, 4)]
+    # [1, 2]
+    # @items.first.product
+    # @items.last.product 就叫不到CartItem的product方法
   end
 
   def add_item(product_id)
@@ -20,7 +24,7 @@ class Cart
       # found_item.quantity += 1
       found_item.increment
     else
-      @items << CartItem.new(product_id)
+      @items << product_id
     end
   end
 
